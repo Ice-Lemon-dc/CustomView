@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".test.TestActivity"
+    android:orientation="vertical">
+    
+    <com.dc.customview.test.ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:progressTextSize="20sp"
+        app:progressTextColor="@color/colorAccent"
+        app:innerBackground="@color/colorPrimary"
+        app:outerBackground="@color/colorAccent"
+        app:roundWidth="5dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="exchange"
+        android:text="切换"/>
+
+    <com.dc.customview.test.ShapeView
+        android:id="@+id/shape_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <com.dc.customview.ratingbar.RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:gradeNumber="5"
+        app:starNormal="@drawable/star_normal"
+        app:starFocus="@drawable/star_selected"/>
+</LinearLayout>

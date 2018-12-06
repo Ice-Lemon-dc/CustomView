@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.dc.customview.textview.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Hello World!"
+        app:customText="Lemon"
+        app:customTextColor="#FF0000"
+        app:customTextSize="20sp" />
+
+    <com.dc.customview.qqstep.QQStepView
+        android:id="@+id/step_view"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:borderWidth="20dp"
+        app:innerColor="@color/colorAccent"
+        app:outerColor="@color/colorPrimary"
+        app:stepTextColor="@color/colorAccent"
+        app:stepTextSize="26sp" />
+
+    <com.dc.customview.colortracktextview.ColorTrackTextView
+        android:id="@+id/color_track_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Hello World"
+        app:changeColor="@color/colorAccent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左到右"
+        android:onClick="leftToRight"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右到左"
+        android:onClick="rightToLeft"/>
+
+</LinearLayout>
