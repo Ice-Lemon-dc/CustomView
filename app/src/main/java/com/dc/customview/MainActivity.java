@@ -10,6 +10,20 @@ import android.view.animation.DecelerateInterpolator;
 import com.dc.customview.colortracktextview.ColorTrackTextView;
 import com.dc.customview.qqstep.QQStepView;
 
+/**
+ *  自定义View:
+ *      1.自定义属性,获取自定义属性(达到配置效果)
+ *      2.onMeasure()方法用于测量计算自己的宽高(如果是继承系统已有的TextView、Button则不需要)
+ *      3.onDraw()用于绘制自己的显示
+ *      4.onTouch()用于与用户交互
+ *
+ *   自定义ViewGroup:
+ *      1.自定义属性,获取自定义属性(达到配置效果) 很少有
+ *      2.onMeasure()方法,for循环测量子View,根据子View的宽高来计算自己的宽高
+ *      3.onDraw()一般不需要,默认情况是不会调用,如果需要绘制需要实现dispatchDraw()方法
+ *      4.onLayout()用来摆放子View,前提是不是GONE的情况
+ *      5.onTouch()用于与用户交互
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ColorTrackTextView mColorTrackTextView;
