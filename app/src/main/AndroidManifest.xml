@@ -11,15 +11,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".colortracktextview.ViewPagerActivity" />
-        <activity android:name=".test.TestActivity"></activity>
-        <activity android:name=".viewpager.ViewPagerCardActivity">
+        <activity android:name=".test.TestActivity" />
+        <activity android:name=".viewpager.ViewPagerCardActivity"></activity>
+        <activity android:name=".flowlayout.FlowActivity" />
+        <activity android:name=".touch.TouchActivity">
+
+        </activity>
+        <activity android:name=".slidingmenu.SlidingMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".flowlayout.FlowActivity"></activity>
     </application>
 
 </manifest>
