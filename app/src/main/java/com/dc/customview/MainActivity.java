@@ -2,10 +2,11 @@ package com.dc.customview;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.dc.customview.colortracktextview.ColorTrackTextView;
 import com.dc.customview.qqstep.QQStepView;
