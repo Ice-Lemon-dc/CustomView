@@ -6,8 +6,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.dc.customview.R;
 
 public class ShapeView extends View {
 
@@ -34,6 +38,7 @@ public class ShapeView extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
+        // 只保证是正方形
         setMeasuredDimension(Math.min(width, height), Math.min(width, height));
     }
 
@@ -42,15 +47,15 @@ public class ShapeView extends View {
         switch (mCurrentShape) {
             case Circle:
                 int center = getWidth() / 2;
-                mPaint.setColor(Color.YELLOW);
+                mPaint.setColor(ContextCompat.getColor(getContext(), R.color.circle));
                 canvas.drawCircle(center, center, center, mPaint);
                 break;
             case Square:
-                mPaint.setColor(Color.BLUE);
+                mPaint.setColor(ContextCompat.getColor(getContext(),R.color.rect));
                 canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
                 break;
             case Triangle:
-                mPaint.setColor(Color.RED);
+                mPaint.setColor(ContextCompat.getColor(getContext(),R.color.triangle));
                 if (mPath == null) {
                     mPath = new Path();
                     mPath.moveTo(getWidth() / 2, 0);
@@ -87,5 +92,9 @@ public class ShapeView extends View {
          * 圆形，正方形，三角
          */
         Circle, Square, Triangle
+    }
+
+    public Shape getCurrentShape() {
+        return mCurrentShape;
     }
 }
