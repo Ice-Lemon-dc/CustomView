@@ -9,23 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".loading.LoadingActivity">
+        <activity android:name=".parallaxviewpager.ParallaxViewPagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".verticaldragview.VerticalDragViewActivity">
+        <activity android:name=".messagebubble.MessageBubbleActivity">
 
         </activity>
+        <activity android:name=".circleloading.CircleLoadingActivity"></activity>
+        <activity android:name=".listdata.ListDataScreenActivity" />
+        <activity android:name=".loading.LoadingActivity" />
+        <activity android:name=".verticaldragview.VerticalDragViewActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".colortracktextview.ViewPagerActivity" />
         <activity android:name=".test.TestActivity" />
         <activity android:name=".viewpager.ViewPagerCardActivity" />
         <activity android:name=".flowlayout.FlowActivity" />
         <activity android:name=".touch.TouchActivity" />
-        <activity android:name=".slidingmenu.SlidingMenuActivity"></activity>
+        <activity android:name=".slidingmenu.SlidingMenuActivity" />
     </application>
 
 </manifest>

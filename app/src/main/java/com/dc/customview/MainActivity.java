@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.dc.customview.colortracktextview.ColorTrackTextView;
 import com.dc.customview.qqstep.QQStepView;
 
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 /**
  *  自定义View:
  *      1.自定义属性,获取自定义属性(达到配置效果)
@@ -49,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         valueAnimator.start();
 
         mColorTrackTextView = findViewById(R.id.color_track_tv);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("")
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build();
     }
 
     public void leftToRight(View view) {
